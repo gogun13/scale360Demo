@@ -1,0 +1,9 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(D:\workspaceScala\scale360Demo\conf\application.conf,D:\workspaceScala\scale360Demo\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(D:\workspaceScala\scale360Demo\conf\evolutions,D:\workspaceScala\scale360Demo\target\scala-2.11\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(D:\workspaceScala\scale360Demo\conf\generated.keystore,D:\workspaceScala\scale360Demo\target\scala-2.11\classes\generated.keystore)[0m
+[0m[[0mdebug[0m] [0m	(D:\workspaceScala\scale360Demo\conf\logback.xml,D:\workspaceScala\scale360Demo\target\scala-2.11\classes\logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(D:\workspaceScala\scale360Demo\conf\routes,D:\workspaceScala\scale360Demo\target\scala-2.11\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(D:\workspaceScala\scale360Demo\conf\secure.conf,D:\workspaceScala\scale360Demo\target\scala-2.11\classes\secure.conf)[0m
+[0m[[0mdebug[0m] [0m	(D:\workspaceScala\scale360Demo\conf\evolutions\default,D:\workspaceScala\scale360Demo\target\scala-2.11\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(D:\workspaceScala\scale360Demo\conf\evolutions\default\1.sql,D:\workspaceScala\scale360Demo\target\scala-2.11\classes\evolutions\default\1.sql)[0m

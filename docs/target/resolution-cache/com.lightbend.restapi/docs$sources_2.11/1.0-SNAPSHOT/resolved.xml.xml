@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="com.lightbend.restapi"
+		module="docs$sources_2.11"
+		revision="1.0-SNAPSHOT"
+		status="integration"
+		publication="20171021160134"
+	/>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		<conf name="compile-internal" visibility="private" description="" extends="compile,optional,provided"/>
+		<conf name="runtime-internal" visibility="private" description="" extends="runtime,optional"/>
+		<conf name="test-internal" visibility="private" description="" extends="test,optional,provided"/>
+		<conf name="plugin" visibility="private" description=""/>
+		<conf name="sources" visibility="public" description=""/>
+		<conf name="docs" visibility="public" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+		<conf name="scala-tool" visibility="private" description=""/>
+		<conf name="scalafmt" visibility="private" description=""/>
+	</configurations>
+	<publications>
+	</publications>
+	<dependencies>
+		<dependency org="org.scalameta" name="inline_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="inline_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.geirsson" name="scalafmt-cli_2.11" rev="0.3.1" transitive="false" conf="scalafmt->default,compile,runtime,default(compile),master" info.apiURL="https://olafurpg.github.io/scalafmt/docs/">
+			<artifact name="scalafmt-cli_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalameta" name="trees_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="trees_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.11" transitive="false" conf="scala-tool->default,compile,runtime,optional,optional(default),master;scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="scala-compiler" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalariform" name="scalariform_2.11" rev="0.1.8" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="scalariform_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scala-lang.modules" name="scala-parser-combinators_2.11" rev="1.0.4" transitive="false" conf="scala-tool->compile,runtime(*),master(compile),runtime,compile(*),master;scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="scala-parser-combinators_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scala-lang" name="scala-reflect" rev="2.11.11" transitive="false" conf="scala-tool->compile,runtime(*),master(compile),runtime,compile(*),master;scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master" info.apiURL="http://www.scala-lang.org/api/2.11.11/">
+			<artifact name="scala-reflect" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalameta" name="parsers_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="parsers_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.lihaoyi" name="fastparse-utils_2.11" rev="0.3.7" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="fastparse-utils_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalameta" name="tokenizers_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="tokenizers_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalameta" name="transversers_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="transversers_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.lihaoyi" name="scalaparse_2.11" rev="0.3.7" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="scalaparse_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.lightbend.paradox" name="paradox-theme-generic" rev="0.2.9" transitive="false" conf="compile->default,compile,runtime,default(compile),master;runtime->default,compile,runtime,default(compile),master;test->default,compile,runtime,default(compile),master;compile-internal->default,compile,runtime,default(compile),master;runtime-internal->default,compile,runtime,default(compile),master;test-internal->default,compile,runtime,default(compile),master">
+			<artifact name="paradox-theme-generic" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scala-lang.modules" name="scala-xml_2.11" rev="1.0.5" transitive="false" conf="scala-tool->compile,runtime(*),master(compile),runtime,compile(*),master;scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="scala-xml_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.geirsson" name="scalafmt-macros_2.11" rev="0.3.1" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master" info.apiURL="https://olafurpg.github.io/scalafmt/docs/">
+			<artifact name="scalafmt-macros_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalameta" name="dialects_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="dialects_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.11" transitive="false" conf="compile->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;runtime->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;test->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;compile-internal->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;runtime-internal->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;test-internal->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;scala-tool->default,compile,runtime(*),master(compile),runtime,optional,optional(default),compile(*),master;scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master,default,default(compile)" info.apiURL="http://www.scala-lang.org/api/2.11.11/">
+			<artifact name="scala-library" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalameta" name="quasiquotes_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="quasiquotes_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.lihaoyi" name="fastparse_2.11" rev="0.3.7" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="fastparse_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.geirsson" name="scalafmt-core_2.11" rev="0.3.1" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master" info.apiURL="https://olafurpg.github.io/scalafmt/docs/">
+			<artifact name="scalafmt-core_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalameta" name="scalameta_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="scalameta_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalameta" name="inputs_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="inputs_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.lihaoyi" name="sourcecode_2.11" rev="0.1.1" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="sourcecode_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.github.scopt" name="scopt_2.11" rev="3.3.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="scopt_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="jline" name="jline" rev="2.14.3" transitive="false" conf="scala-tool->compile,master(compile),compile(*),master">
+			<artifact name="jline" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalameta" name="common_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="common_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalameta" name="tokens_2.11" rev="1.0.0" transitive="false" conf="scalafmt->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="tokens_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+	</dependencies>
+</ivy-module>
