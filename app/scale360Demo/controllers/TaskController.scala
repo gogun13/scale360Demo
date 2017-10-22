@@ -66,15 +66,15 @@ class TaskController @Inject()(taskService:TaskService,cc: PostControllerCompone
 
   def index: Action[AnyContent] = PostAction.async { implicit request =>
     logger.info("index: ")
-    taskService.listAll.map { posts =>
-      Ok(Json.toJson(posts))
+    taskService.listAll.map { dataList =>
+      Ok(Json.toJson(Json.obj("dataList" -> dataList)))
     }
   }
 
   def findById(id: String): Action[AnyContent] = PostAction.async { implicit request =>
     logger.info("findById: ")
-    taskService.findById(Integer.parseInt(id)).map { posts =>
-      Ok(Json.toJson(posts))
+    taskService.findById(Integer.parseInt(id)).map { dataDetail =>
+      Ok(Json.toJson(dataDetail))
     }
   }
 
@@ -86,8 +86,8 @@ class TaskController @Inject()(taskService:TaskService,cc: PostControllerCompone
     }
 
     def success(input: TaskFormDataAdd) = {
-      taskService.addTask(input).map { row =>
-        Created(Json.toJson(Json.obj("status" -> "SUCCESS", "row" -> row)))
+      taskService.addTask(input).map { id =>
+        Created(Json.toJson(Json.obj("status" -> "SUCCESS", "id" -> id)))
       }
     }
 
